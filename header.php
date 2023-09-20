@@ -21,7 +21,7 @@ if (isset($_SESSION['id'])) {
 <ul>
   <li><a href="index.php">Accueil</a></li>
   <li><a href="connexion.php">Connexion</a></li>
-  <li><a href="inscription.php">Inscription</a></li>
+  <li><a href="register.php">Inscription</a></li>
   <!-- <li><a href="about.asp">About</a></li> -->
 </ul>
-</div>
+</div>  
