@@ -41,7 +41,7 @@
                         <input type="submit" class="btn btn-primary" value="S'inscrire" name="submit">
                     </div>
                 </form>
-             
+bonjour
             </div>
         </div>
         <div class="col-3"></div>
