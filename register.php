@@ -52,7 +52,7 @@ $user->register($_POST['login'], $_POST['name'], $_POST['password'], $_POST['rep
                         <input type="submit" class="btn btn-primary" value="Subscribe" name="submit">
                     </div>
                 </form>
-             
+bonjour
             </div>
         </div>
         <div class="col-3"></div>
