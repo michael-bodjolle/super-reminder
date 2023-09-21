@@ -24,4 +24,4 @@ if (isset($_SESSION['id'])) {
   <li><a href="register.php">Inscription</a></li>
   <!-- <li><a href="about.asp">About</a></li> -->
 </ul>
-</div>
+</div>  

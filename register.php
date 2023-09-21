@@ -18,13 +18,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <header>    <?php 
+include "header.php";
+
+if (isset($_POST['submit'])){
+$user->register($_POST['login'], $_POST['name'], $_POST['password'], $_POST['repeatpassword']);
+// var_dump($user);
+} 
+
+?></header>
 <div class="container">
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
             <div class="border p-4 bg-light-gray">
-                <br><h1>Inscription</h1>
-                <form action="inscription.php" method="post">
+                <br><h1>Register</h1>
+
+                
+                <form action="" method="post">
                     <div class="mb-4">
                         <input type="text" class="form-control" name="login" placeholder="Login">
                     </div>
@@ -35,13 +46,13 @@
                         <input type="password" class="form-control" name="password" placeholder="Password">
                     </div>
                     <div class="mb-4">
-                        <input type="password" class="form-control" name="repeat_password" placeholder="Repeat Password">
+                        <input type="password" class="form-control" name="repeatpassword" placeholder="Repeat Password">
                     </div>
                     <div class="form-btn">
-                        <input type="submit" class="btn btn-primary" value="S'inscrire" name="submit">
+                        <input type="submit" class="btn btn-primary" value="Subscribe" name="submit">
                     </div>
                 </form>
-             
+bonjour
             </div>
         </div>
         <div class="col-3"></div>
