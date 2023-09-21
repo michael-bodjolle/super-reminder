@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
+    <title>Register</title>
 
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -27,6 +27,9 @@ $user->register($_POST['login'], $_POST['name'], $_POST['password'], $_POST['rep
 } 
 
 ?></header>
+
+<main>
+   
 <div class="container">
     <div class="row">
         <div class="col-3"></div>
@@ -52,11 +55,13 @@ $user->register($_POST['login'], $_POST['name'], $_POST['password'], $_POST['rep
                         <input type="submit" class="btn btn-primary" value="Subscribe" name="submit">
                     </div>
                 </form>
-bonjour
+
             </div>
         </div>
         <div class="col-3"></div>
     </div>
 </div>
+</main>
+<footer></footer>
 </body>
 </html>
