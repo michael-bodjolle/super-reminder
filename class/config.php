@@ -2,9 +2,9 @@
 
 session_start();
 
-require_once "connect-bdd.php";
-$bdd= new Database();
-$bdd = $bdd->connectDb();
+require_once "class/connect-bdd.php";
+$db= new Database();
 
-// require_once "class/user.php";
-// $user= new User($bdd);
+
+require_once "class/user.php";
+$user= new User($db);
