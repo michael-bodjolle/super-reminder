@@ -13,7 +13,7 @@
     {
         $this->db_host = "localhost";
         $this->db_login = "root";
-        $this->db_password = "";
+        $this->db_password = "azerty";
         $this->db_name = "super-reminder";
  
  
