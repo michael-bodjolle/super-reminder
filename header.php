@@ -2,17 +2,17 @@
 
 require_once "class/config.php";
 
-if (isset($_SESSION['id'])) {
+// if (isset($_SESSION['id'])) {
 
-    $connexionbdd = $bdd->connectDb();
+//     $connexionbdd = $db->PDO->connectDb();
 
-    $ssid = $_SESSION['id'];
-    $recupid = $connexionbdd->prepare("SELECT * FROM user WHERE id ='$ssid'");
-    $recupid->execute();
-    $results = $recupid->fetch(PDO::FETCH_ASSOC);
+//     $ssid = $_SESSION['id'];
+//     $recupid = $connexionbdd->prepare("SELECT * FROM user WHERE id ='$ssid'");
+//     $recupid->execute();
+//     $results = $recupid->fetch(PDO::FETCH_ASSOC);
 
-    
-}
+
+// }
 
 
 ?>
@@ -33,10 +33,10 @@ if (isset($_SESSION['id'])) {
   </div>
 </nav>
 <div class="nav">
-<!-- <ul>
+  <!-- <ul>
   <li><a href="index.php">Accueil</a></li>
   <li><a href="connexion.php">Connexion</a></li>
   <li><a href="register.php">Inscription</a></li>
   <!-- <li><a href="about.asp">About</a></li> -->
-<!-- </ul> --> 
-<!-- </div>   -->
+  <!-- </ul> -->
+  <!-- </div>   -->
