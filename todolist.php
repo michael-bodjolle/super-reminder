@@ -43,7 +43,9 @@ require_once "header.php";
 
         <h2> Tasks </h2>
 
-        <div id="tasks">
+        <div id="tasks"> 
+            
+        </div>
 
         <script src="js/script.js"></script>
 </body>
