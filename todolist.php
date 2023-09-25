@@ -23,20 +23,28 @@ require_once "header.php";
 ?> 
     
     </header>
-    <h1>listes des taches</h1>
+    <h1>Tasks's list</h1>
         
-        <form action="" id="nouvelle-tache-form">
+        <form action="" id="new-task-form">
             <input 
                type="text" 
-               id="nouvelle-tache-input" 
-               placeholder="qu'est ce que j'ai prévu ?"
+               id="new-task-input" 
+               placeholder="what i need to do?"
                autocomplete="off">
                
             <input 
                type="submit"
-               id="nouvelle-tache-ajouer" 
-               value="Ajouter tache">
+               id="new-task-add" 
+               value="Add task">
                
         </form>
+
+        <section class="task-list">
+
+        <h2> Tasks </h2>
+
+        <div id="tasks">
+
+        <script src="js/script.js"></script>
 </body>
 </html>
