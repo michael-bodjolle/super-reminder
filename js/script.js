@@ -1,23 +1,20 @@
 window.addEventListener('load', () => {
 
     const form = document.querySelector("#new-task-form");
-    const input = document.querySelector("#new-task-input");
     const list_el =document.querySelector("#tasks");
     
-
-
     window.addEventListener('submit', (e) => {
+      
+      const input = document.querySelector("#new-task-input").value; // si je sauvgarde le resultat de mon input avant d'avoir submit alors il sera vide, egal a rien
+      console.log(input,) 
+      
     
          e.preventDefault();
 
-         const task = input.value
+          let formData = new FormData() 
+          formData.append("task", input);
+         
 
-          if(!task){
-            alert("S'il vous plait ajouter une tâche");
-            
-            
-            return;
-          }
 
           let result= fetch("traitement.php", { 
            method: 'POST',
