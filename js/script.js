@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
     window.addEventListener('submit', (e) => {
       
       const input = document.querySelector("#new-task-input").value; // si je sauvgarde le resultat de mon input avant d'avoir submit alors il sera vide, egal a rien
-      console.log(input,) 
+      console.log(input,'task') 
       
     
          e.preventDefault();
