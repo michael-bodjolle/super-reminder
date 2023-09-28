@@ -19,23 +19,35 @@
         
 <?php 
 require_once "header.php";
+require_once "class/task.php";
+ 
+$task= new Task();
+$task->addtask($_SESSION['id'],"grominet");
 
+if (isset($_POST['submit'])){
+    $task->addtask($_SESSION['id'],$_POST['task']);
+}  
+
+var_dump($_SESSION);
 ?> 
     
     </header>
     <h1>Tasks's list</h1>
         
-        <form action="" id="new-task-form">
+        <form action="" id="new-task-form" method="post">
             <input 
                type="text" 
                id="new-task-input" 
+               name="task"
                placeholder="what i need to do?"
                autocomplete="off">
                
             <input 
                type="submit"
                id="new-task-add" 
-               value="Add task">
+               value="Add task"
+               name="submit">
+
                
         </form>
 
@@ -47,6 +59,6 @@ require_once "header.php";
             
         </div>
 
-        <script src="js/script.js"></script>
+        <!-- <script src="js/script.js"></script> -->
 </body>
 </html>

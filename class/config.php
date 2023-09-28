@@ -8,3 +8,4 @@ $db= new Database();
 
 require_once "class/user.php";
 $user= new User($db);
+

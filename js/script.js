@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
             return response.text();
           })
     
-       console.log(result);
+        console.log(result);
 
 
      })

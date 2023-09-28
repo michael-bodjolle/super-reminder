@@ -16,6 +16,18 @@
 <?php 
 require_once "header.php";
 
-?>
+$userData = $user->getUserByIdFromSession();
+
+if ($userData) {
+    
+ 
+    echo " <br><h1>BIENVENUE </h1>  " . $userData['login'] . "<br>";
+    
+} 
+
+
+ 
+?> 
+ <br><h1>TA TODO</h1>
 </body>
 </html>
