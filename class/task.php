@@ -1,7 +1,7 @@
 <?php
 
 require_once "connect-bdd.php";
-require_once "user.php";
+
 
 class Task extends Database
 {
@@ -14,8 +14,7 @@ class Task extends Database
             $query->bindParam(':id_user', $id_user);
             $query->bindParam(':task', $task);
             $query->execute();
-            var_dump($query);
-            var_dump($_POST);
+            
 
      }
      else { echo "add a task please";}

@@ -19,16 +19,11 @@
         
 <?php 
 require_once "header.php";
-require_once "class/task.php";
+require_once "traitement.php";
  
-$task= new Task();
-$task->addtask($_SESSION['id'],"grominet");
+ 
 
-if (isset($_POST['submit'])){
-    $task->addtask($_SESSION['id'],$_POST['task']);
-}  
 
-var_dump($_SESSION);
 ?> 
     
     </header>
@@ -43,10 +38,10 @@ var_dump($_SESSION);
                autocomplete="off">
                
             <input 
-               type="submit"
+               type="button"
                id="new-task-add" 
                value="Add task"
-               name="submit">
+               >
 
                
         </form>
@@ -59,6 +54,6 @@ var_dump($_SESSION);
             
         </div>
 
-        <!-- <script src="js/script.js"></script> -->
+        <script src="js/script.js"></script>
 </body>
 </html>
