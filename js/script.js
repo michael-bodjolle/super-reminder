@@ -16,10 +16,10 @@ window.addEventListener('load', () => {
           formData.append("task", input);
 
         
-          let result= await fetch("traitement.php", { 
+           let result= await fetch("traitement.php", { 
            method: 'POST',
            body: formData })
-          let response = await result.json()
+           response = await result.json()
 
           console.log(response)
 

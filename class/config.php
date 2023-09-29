@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once "class/connect-bdd.php";
+require_once "class/Database.php";
 $db= new Database();
 
 

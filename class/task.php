@@ -1,6 +1,6 @@
 <?php
 
-require_once "connect-bdd.php";
+require_once "Database.php";
 
 
 class Task extends Database
@@ -10,14 +10,15 @@ class Task extends Database
     {
         //  $this->bdd->connectPDO();
         if (!empty($task)) {
-            $query = $this->PDO->prepare("INSERT INTO tasks (id_user, task) VALUES (:id_user, :task)");
+            $query = $this->db->prepare("INSERT INTO tasks (id_user, task) VALUES (:id_user, :task)");
             $query->bindParam(':id_user', $id_user);
             $query->bindParam(':task', $task);
-            $query->execute();
+            $results = $query->execute();
+
+            return $results;
             
 
      }
-     else { echo "add a task please";}
     }
 
     // public function gettask()

@@ -1,6 +1,6 @@
 <?php
 
-require_once "connect-bdd.php";
+require_once "Database.php";
 
 class User extends Database
 {
@@ -19,7 +19,7 @@ class User extends Database
             if ($password == $repeatpassword) {
 
                 $passwordhash = password_hash($password, PASSWORD_BCRYPT);
-                $query = $this->PDO->prepare("INSERT INTO user (login, name, password) VALUES (:login, :name, :password)");
+                $query = $this->db->prepare("INSERT INTO user (login, name, password) VALUES (:login, :name, :password)");
 
 
 
@@ -41,7 +41,7 @@ class User extends Database
         if (!empty($login) && !empty($password)) {
 
 
-            $query = $this->PDO->prepare("SELECT * FROM `user` WHERE login = :login");
+            $query = $this->db->prepare("SELECT * FROM `user` WHERE login = :login");
             // Liez les valeurs aux paramètres
 
             $query->bindParam(':login', $login, PDO::PARAM_STR);
@@ -64,7 +64,7 @@ class User extends Database
     public function getUserByIdFromSession() {
         if (isset($_SESSION['id'])) {
             $ssid = $_SESSION['id'];
-            $query = $this->PDO->prepare("SELECT * FROM user WHERE id = :id");
+            $query = $this->db->prepare("SELECT * FROM user WHERE id = :id");
             $query->bindParam(':id', $ssid);
             $query->execute();
             return $query->fetch(PDO::FETCH_ASSOC);
