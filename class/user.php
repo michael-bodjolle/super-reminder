@@ -48,7 +48,7 @@ class User extends Database
             //  $query->bindParam(':password', $password);
             $query->execute();
             $results = $query->fetch(PDO::FETCH_ASSOC);
-            var_dump($query);
+            // var_dump($results);
 
 
             if (!empty($login) && password_verify($password, $results['password'])) {
@@ -59,5 +59,26 @@ class User extends Database
         } else echo "veuillez saisir tout saisir les champs";
 
         //  Exécutez la requête d'insertion
+    }
+
+    public function getUserByIdFromSession() {
+        if (isset($_SESSION['id'])) {
+            $ssid = $_SESSION['id'];
+            $query = $this->PDO->prepare("SELECT * FROM user WHERE id = :id");
+            $query->bindParam(':id', $ssid);
+            $query->execute();
+            return $query->fetch(PDO::FETCH_ASSOC);
+            
+        } else {
+            return null; // La session n'a pas d'ID défini
+        }
+    }
+
+
+    public function Disconnect()
+    {
+        session_unset();
+        session_destroy();
+        header('location:connexion.php');
     }
 }

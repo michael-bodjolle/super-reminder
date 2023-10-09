@@ -19,23 +19,30 @@
         
 <?php 
 require_once "header.php";
+require_once "traitement.php";
+ 
+ 
+
 
 ?> 
     
     </header>
     <h1>Tasks's list</h1>
         
-        <form action="" id="new-task-form">
+        <form action="" id="new-task-form" method="post">
             <input 
                type="text" 
                id="new-task-input" 
+               name="task"
                placeholder="what i need to do?"
                autocomplete="off">
                
             <input 
-               type="submit"
+               type="button"
                id="new-task-add" 
-               value="Add task">
+               value="Add task"
+               >
+
                
         </form>
 

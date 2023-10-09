@@ -20,11 +20,13 @@ include "header.php";
 
 if (isset($_POST['submit'])){
     $user->connexion($_POST['login'],$_POST['password']);
-    var_dump($user);
+
+    
     }  
+   
 
 ?></header>
-<div class="container">
+<div  class="container my-5">
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
