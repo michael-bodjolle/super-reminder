@@ -16,7 +16,7 @@ class Database
       //indique à PDO de bien générer une erreur fatale si un problème survient. 
       $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
-      return $this->db;
+      // return $this->db;
     } catch (PDOException $e) {
       echo "Erreur : " . $e->getMessage();
     }

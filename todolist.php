@@ -29,7 +29,7 @@ require_once "traitement.php";
     </header>
     <h1>Tasks's list</h1>
         
-        <form action="" id="new-task-form" method="post">
+        <form  id="new-task-form" method="post">
             <input 
                type="text" 
                id="new-task-input" 
