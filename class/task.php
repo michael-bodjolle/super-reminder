@@ -14,7 +14,7 @@ class Task extends Database
             $query->bindParam(':id_user', $id_user);
             $query->bindParam(':task', $task);
             $query->execute(); 
-            return ;
+            
             //var_dump($query);
             // return $results;
             
@@ -30,18 +30,31 @@ class Task extends Database
             $query->execute();
             $results = $query->fetchAll();
 
-        return $results;
+          return $results ;
     
     //  }
     }
-
-
-
-    // public function DeleteTask($id)
+    
+    // public function UdpdateTask($id)
     // {
-
-    //     $query = $this->db->prepare("DELETE FROM tasks WHERE id = $id ");
-    //     $query->execute();
         
+    //     $query = $this->db->prepare("UPDATE tasks SET task=:task  WHERE id=:id");
+    //     $query->bindParam(':id_user', $id_user);
+    //     $query->bindParam(':task', $task);
+    //     $query->execute();
+
     // }
-}
+    
+
+    public function deleteTask($id)
+    {
+
+        $query = $this->db->prepare("DELETE FROM tasks WHERE id = :id ");
+        $query->bindParam(':id', $id);
+        $query->execute(); 
+        
+        
+     
+    }
+
+} 

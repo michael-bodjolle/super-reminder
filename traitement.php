@@ -12,12 +12,18 @@ if (isset($_POST['task'])){
       $result = $task->addTask($_SESSION['id'],$_POST['task']);
        
         echo json_encode($result);
-       
+    
     }
 
     if (isset($_GET['task'])){
 //    $task->addTask($_SESSION['id'],$_POST['task']);
    $result = $task->getTask($_SESSION['id']);
     echo json_encode($result);
-    die();
-} 
+    // die();
+}
+
+//   if (isset($_POST['task'])) {
+//     $result = $task->deleteTask($_POST['id']);
+       
+//     // echo json_encode();
+//   }   

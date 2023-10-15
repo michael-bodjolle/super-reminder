@@ -27,6 +27,7 @@ require_once "traitement.php";
 ?> 
     
     </header>
+    <main>
     <h1>Tasks's list</h1>
         
         <form  id="new-task-form" method="post">
@@ -53,7 +54,10 @@ require_once "traitement.php";
         <div id="tasks"> 
             
         </div>
+        </main>
+        <footer>
 
-        <script src="js/script.js"></script>
+        </footer>
+        <script defer src="js/script.js"></script>
 </body>
 </html>
