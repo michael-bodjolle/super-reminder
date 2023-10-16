@@ -76,6 +76,18 @@
                 list_el.appendChild(task_el);
                 
                 // console.log(list_el,"element");
+                task_delet_el.addEventListener('click', async () =>{
+              
+                  let result= await fetch("traitement.php", { 
+                    method: 'DELETE',
+                    })
+                     //  console.log(result,"result");
+                   // response= await result.json();
+                    
+                   displayTasks();
+            
+                  //  list_el.removeChild(task_el); // wtf???
+               });
 
                  
             });
@@ -91,18 +103,7 @@
     // displayTasks();
     // console.log(displayTasks());
     
-  //   task_delet_el.addEventListener('click', async () =>{
-              
-  //     let result= await fetch("traitement.php", { 
-  //       method: 'DELETE',
-  //       })
-  //        //  console.log(result,"result");
-  //      // response= await result.json();
-        
-  //      displayTasks();
-
-  //      list_el.removeChild(task_el); // wtf???
-  //  });
+ 
     
 
     // ajout de la tache

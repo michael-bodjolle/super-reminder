@@ -22,8 +22,8 @@ if (isset($_POST['task'])){
     // die();
 }
 
-//   if (isset($_POST['task'])) {
-//     $result = $task->deleteTask($_POST['id']);
+  if (isset($_POST['task'])) {
+    $result = $task->deleteTask($_POST['id']);
        
-//     // echo json_encode();
-//   }   
+    echo json_encode($result);
+  }   
